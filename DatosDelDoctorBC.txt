@@ -1,0 +1,32 @@
+--Datos del tutor
+*Nombre
+*Apellido P
+*Apellido M
+*Sexo
+*Parentesco
+*Celular
+
+--Datos Iniciales
+*Nombre
+*Apellido P
+*Apellido M
+*Sexo
+*Peso
+*Fecha de Nacimiento
+*Direccion
+*Edad
+
+--Antecedentes
+*Alergias
+*Antecedentes heredofamiliares
+--Ultima enfermedad
+*Nombre de la enfermedad
+*Motivos de la consulta
+*Medicamentos recetados
+*Fecha Inicio
+*Fecha fin
+*Nombre del medico *se ingresa solo pero estara el input
+*Fecha dela consulta
+--Historial de vacunas
+*Nombre de vacuna
+*Fecha de la vacuna
