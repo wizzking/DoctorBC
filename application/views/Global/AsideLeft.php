@@ -125,7 +125,7 @@
         </li>
 
           <li class="treeview ">
-          <a href="#">
+          <a href="index.php/consulta">
             <i class=""></i> <span>Nueva Consulta</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
