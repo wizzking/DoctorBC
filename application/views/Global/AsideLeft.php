@@ -117,44 +117,40 @@
 
         <li class="treeview ">
           <a href="#">
-            <i class="fa fa-dashboard"></i> <span>Menu</span>
+            <i class=""></i> <span>Lista de Pacientes</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
-          <ul class="treeview-menu">
-            <li ><a href="#"><i class="fa fa-circle-o"></i> Barra de Navegacion</a></li>
-            <li ><a href="#"><i class="fa fa-circle-o"></i> Comidas</a></li>
-            <li ><a href="#"><i class="fa fa-circle-o"></i> Especialidades</a></li>
-
-            <li class="treeview">
-              <a href="#"><i class="fa fa-circle-o"></i> Galeria
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o"></i> Restaurante</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> Comidas</a></li>
-              </ul>
-            </li>
-						<li><a href="<?php echo base_url('index.php/NosotrosActualizar') ?>"><i class="fa fa-circle-o"></i>Actualizar Sobre Nosotros</a></li>
-            <li><a href="<?php echo base_url('index.php/Reservaciones'); ?>"><i class="fa fa-circle-o"></i>Reservaciones</a></li>
-            <li><a href="<?php echo base_url('index.php/Contacto'); ?>"><i class="fa fa-circle-o"></i>Contacto</a></li>
-          </ul>
         </li>
 
-        <li class="treeview ">
+          <li class="treeview ">
           <a href="#">
-            <i class="fa fa-dashboard"></i> <span>Usuarios</span>
+            <i class=""></i> <span>Nueva Consulta</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
-          <ul class="treeview-menu">
-            <li ><a href="<?php echo base_url('index.php/Registro');?>"><i class="fa fa-circle-o"></i> Agregar</a></li>
-            <li ><a href="<?php echo base_url('index.php/CambiarContrasena');?>"><i class="fa fa-circle-o"></i> Cambiar Contraseña</a></li>
-          </ul>
+        </li>
+
+
+          <li class="treeview ">
+          <a href="#">
+            <i class=""></i> <span>Nuevo Paciente</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+        </li>
+
+
+          <li class="treeview ">
+          <a href="#">
+            <i class=""></i> <span>Configuraciones de la cuenta</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
         </li>
 
         <!--<li class="treeview">
