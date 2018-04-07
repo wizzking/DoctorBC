@@ -22,13 +22,13 @@
   <div class="login-box-body">
     <p class="login-box-msg">Iniciar Sesion</p>
 
-    <form action="../../index2.html" method="post">
+    <form action="<?php echo base_url('index.php/Sesion/new_sesion'); ?>" method="post">
       <div class="form-group has-feedback">
-        <input type="email" class="form-control" placeholder="Correo Electronico">
+        <input aria-describedby="usuario-ayuda" class="form-control" id="txtUsuario" placeholder="Usuario" type="text" name="txtUsuario" title="Introduce Usuario" value="<?php echo (isset($usuario)) ? $usuario : ''; ?>">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Contraseña">
+        <input class="form-control" id="txtContrasenia" name="txtContrasenia" title="Introduce Contraseña"placeholder="Contraseña" type="password">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
@@ -36,10 +36,16 @@
           <a href="<?php echo base_url('/index.php/Sesion/Registro'); ?>">Registrarse!</a>
         </div>
         <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Iniciar</button>
+          <button type="submit" id="btn_entrar" class="btn btn-primary btn-block btn-flat">Iniciar</button>
         </div>
       </div>
     </form>
+    <?php
+          $message = $this->session->flashdata('usuarios');
+            if($message){
+                echo '<div id="error_text" style="color:#FF0000;">' . $message . '</div>';
+            }
+        ?>
 
 </div>
 

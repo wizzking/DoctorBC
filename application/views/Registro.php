@@ -28,7 +28,7 @@
   <div class="register-box-body">
     <p class="login-box-msg">Ingrese sus Datos</p>
 
-    <form action="../../index.html" method="post">
+    <form  method="post">
       <div class="form-group has-feedback">
         <input type="text" class="form-control" placeholder="Nombre">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>

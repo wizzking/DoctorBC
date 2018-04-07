@@ -2,9 +2,9 @@
     <!-- Logo -->
     <a href="index2.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>Adm</b></span>
+      <span class="logo-mini"><b>Usr</b></span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Administrador</b></span>
+      <span class="logo-lg"><b><?php echo $_SESSION["TipoUsuario"];?></b></span>
     </a>
 
     <!-- Header Navbar: style can be found in header.less -->
@@ -90,7 +90,7 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="<?php echo base_url('assets/AdminLTE/dist/img/user2-160x160.jpg');?>" class="user-image" alt="User Image">
-              <span class="hidden-xs">Administrador</span>
+              <span class="hidden-xs"><?php echo $_SESSION["FullName"];?></span>
             </a>
           </li>
           <!-- Control Sidebar Toggle Button -->
@@ -179,7 +179,7 @@
         </li>-->
 
         <li>
-          <a href="#">
+          <a href="<?php echo base_url('index.php/Sesion/logout_ci');?>">
             <i class="fa fa-share"></i> <span>Cerrar Sesion</span>
           </a>
         </li>
