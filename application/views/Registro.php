@@ -30,7 +30,15 @@
 
     <form action="../../index.html" method="post">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="Nombre Completo">
+        <input type="text" class="form-control" placeholder="Nombre">
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" placeholder="Apellido Paterno">
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" placeholder="Apellido Materno">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
