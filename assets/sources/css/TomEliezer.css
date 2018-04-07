@@ -1,0 +1,61 @@
+/*css global*/
+p,h1,h2,h3,h4,label{
+	color:#FFFFFF;
+}
+.form-control{
+	border-radius: 15px 15px 15px 15px;
+	-moz-border-radius: 15px 15px 15px 15px;
+	-webkit-border-radius: 15px 15px 15px 15px;
+	border: 0px solid #000000;
+}
+/*fin del css global*/
+.container .container-img{
+	margin-left: auto;
+	margin-right: auto;
+	width: 100px;
+	height: 100px;
+}
+.content-wrapper{
+	background-color: #03A9F4;
+}
+.table-hover:hover{
+	background-color:#757575;
+}
+.table tr{
+	background-color: #B3E5FC;
+}
+.datosPaciente{
+	background-color: #448AFF;
+}
+.modal-body input,select[multiple], select[size]{
+	background-color: #BDBDBD;
+}
+.modal-dialog{
+	width: 80%;
+}
+.modal-title{
+	color: #000000;
+}
+/*Colores de los botones*/
+.Personales{
+	background-color:#2196F3;
+}
+.Personales:hover{
+	background-color:#2196F3;
+	opacity: 0.5;	
+}
+.Medicos{
+	background-color: #2196F3;
+}
+.Medicos:hover{
+	background-color: #2196F3;
+	opacity: 0.5;	
+}
+.cambiar{
+	background-color: #2196F3;
+}
+.cambiar:hover{
+	background-color: #2196F3;
+	opacity: 0.5;
+}
+/*fin de los colores de los botones*/
