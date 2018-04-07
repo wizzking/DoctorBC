@@ -23,4 +23,7 @@ class Inicio extends CI_Controller
 	{
 		$this->load->view('CambiarContrasena');
 	}
+	public function consulta(){
+		$this->load->view('nuevaConsulta');
+	}
 }
