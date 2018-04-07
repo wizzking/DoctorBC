@@ -43,5 +43,7 @@
 <script src="<?php echo base_url('assets/AdminLTE/dist/js/pages/dashboard2.js');?>"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url('assets/AdminLTE/dist/js/demo.js');?>"></script>
+<!---->
+<script src="<?php echo base_url('assets/sources/js/nuevaConsulta.js');?>"></script>
 </body>
 </html>
