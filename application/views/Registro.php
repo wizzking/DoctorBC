@@ -28,35 +28,38 @@
   <div class="register-box-body">
     <p class="login-box-msg">Ingrese sus Datos</p>
 
-    <form  method="post">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="Nombre">
+        <input type="text" class="form-control" placeholder="Nombre" id="Nombre">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="Apellido Paterno">
+        <input type="text" class="form-control" placeholder="Apellido Paterno" id="ApellidoPaterno">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="Apellido Materno">
+        <input type="text" class="form-control" placeholder="Apellido Materno" id="ApellidoMaterno">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="email" class="form-control" placeholder="Correo Electronico">
+        <input type="email" class="form-control" placeholder="Correo Electronico" id="Correo">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Contraseña">
+        <input type="password" class="form-control" placeholder="Contraseña" id="Contrasena">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Repetir Contraseña">
+        <input type="password" class="form-control" placeholder="Repetir Contraseña" id="ReContrasena">
         <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
       </div>
-    </form>
-
-
-    <a href="#" class="text-center">Ya cuento con un Usuario</a>
+            <div class="row">
+        <div class="col-xs-8">
+          <a href="<?php echo base_url(); ?>">Ya cuento con un Usuario!</a>
+        </div>
+        <div class="col-xs-4">
+          <input type="button" class="btn btn-primary btn-block btn-flat" id="Registrar" value="Registrar">
+        </div>
+      </div>
   </div>
   <!-- /.form-box -->
 </div>
@@ -68,6 +71,9 @@
 <script src="<?php echo base_url('assets/AdminLTE/bower_components/bootstrap/dist/js/bootstrap.min.js');?>"></script>
 <!-- iCheck -->
 <script src="<?php echo base_url('assets/AdminLTE/plugins/iCheck/icheck.min.js');?>"></script>
+
+<script src="<?php echo base_url('assets/sources/js/jquery-1.11.3.min.js');?>"></script>
+<script src="<?php echo base_url('assets/sources/js/Registro.js');?>"></script>
 
 </body>
 </html>

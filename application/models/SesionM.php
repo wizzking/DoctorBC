@@ -41,4 +41,26 @@ class SesionM extends CI_Model
 			return ['success' => false, 'error' => 'usuario'];
 		}
 	}
+	public function InsertRegistros($theInsert,$data)
+	{
+		$this->db->insert("dcb_medicos", $theInsert);
+		$id_r = $this->db->insert_id();		
+		if ($this->db->affected_rows() > 0) 
+		{
+		 	$theInsertv2 = [
+		 		'dcb_Usuario'=>$data['Correo'],
+		 		'dcb_Contrasenia'=>$data['Contrasena'],
+		 		'dcb_IdMedico'=>$id_r,
+		 		'dcb_estatus'=>1,
+		 		'dcb_perfil'=>1
+		 	];
+		 	$this->db->insert("dcb_usuarios", $theInsertv2);
+			 
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
 }
