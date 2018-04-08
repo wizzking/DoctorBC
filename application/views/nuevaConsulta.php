@@ -14,7 +14,7 @@
    	</section>
    	<section>
     	<form>
-    		<div class="row">
+    		<div class="row padding ">
     			<div class="col-md-12">
     				<div class="form-group">
     					<label for="nombreDoctor">Nombre del Doctor:</label>
@@ -34,7 +34,7 @@
     				</div>	
     			</div>
     		</div>
-    		<div class="container-table">
+    		<div class="container-table padding ">
 				<h2>Pacientes</h2>          
 				<table class="table">
 				    <thead>
@@ -58,7 +58,7 @@
 				    </tbody>
 				  </table>
 			</div>
-    		<div id="datosPaciente">
+    		<div id="datosPaciente" class="padding" >
     			<div class="row">
     				<div class="col-md-12">
     					<h2>Paciente:</h2>
@@ -69,17 +69,22 @@
     				<div class="col-md-12 col-md-offset-3">
     					<div class="btn btn-primary Personales" data-toggle="modal" data-target="#ModalAntecedentesPersonales">Ver Antecedentes Personales</div>
     					<div class="btn btn-primary Medicos" data-toggle="modal" data-target="#ModalAntecedentesMedicos">Ver Antecedentes Medicos</div>
-    					<div class="btn btn-primary cambiar" data-toggle="modal" data-target="#ModalPaciente">Cambiar Paciente</div>				
+    					<div class="btn btn-primary cambiar" id="cambiar">Cambiar Paciente</div>				
     				</div>
     			</div>
     		</div>
     		<div >
-    			<div class="row">
+    			<div class="row padding">
     				<div class="col-md-12">
     					<div class="form-group">
 				  			<label for="motivos">Motivos de la consulta:</label>
-				  			<textarea class="form-control" rows="10" id="motivos"></textarea>
+				  			<textarea class="form-control" rows="3" id="motivos"></textarea>
 						</div>	
+    				</div>
+    			</div>
+    			<div class=" row padding">
+    				<div class="col-md-12">
+    					<div class="btn btn-primary">Guardar Consulta</div>
     				</div>
     			</div>
     		</div>
