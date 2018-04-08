@@ -1,6 +1,6 @@
 /*css global*/
 p,h1,h2,h3,h4,label{
-	color:#FFFFFF;
+
 }
 .form-control{
 	border-radius: 15px 15px 15px 15px;
@@ -16,13 +16,11 @@ p,h1,h2,h3,h4,label{
 	height: 100px;
 }
 .content-wrapper{
-	background-color: #03A9F4;
 }
 .table-hover:hover{
 	background-color:#757575;
 }
 .table tr{
-	background-color: #B3E5FC;
 }
 .datosPaciente{
 	background-color: #448AFF;

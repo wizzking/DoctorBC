@@ -18,6 +18,8 @@
 --
 -- Table structure for table `dcb_medicos`
 --
+CREATE Database dbc;
+USE dbc; 
 
 DROP TABLE IF EXISTS `dcb_medicos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
