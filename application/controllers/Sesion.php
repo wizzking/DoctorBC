@@ -95,9 +95,40 @@ class Sesion extends CI_Controller
 		//$this->index();
 		redirect(base_url());
 	}
-	public function token(){
+	public function token()
+	{
 		$token = md5(uniqid(rand(),true));
 		$this->session->set_userdata('token',$token);
 		return $token;
+	}
+	public function InsertRegistro()
+	{
+		$data['Nombre'] 			= $this->input->post("Nombre");
+		$data['ApellidoPaterno'] 	= $this->input->post("ApellidoPaterno");
+		$data['ApellidoMaterno'] 	= $this->input->post("ApellidoMaterno");
+		$data['Correo'] 			= $this->input->post("Correo");
+		$data['Contrasena'] 		= $this->input->post("Contrasena");
+
+		$theInsert = [
+              'dcb_nombre' 		=> $data['Nombre'],
+              'dcb_apellidoP' 	=> $data['ApellidoPaterno'],
+              'dcb_apellidoM' 	=> $data['ApellidoMaterno'],
+              'dcb_correo' 		=> $data['Correo'],
+              'dcb_estatus' 	=> 1
+            ];
+
+
+	    if ($this->SesionM->InsertRegistros($theInsert,$data) == true) 
+        {
+          echo "Exito";
+        }
+        else
+        {
+          echo "Error segundo";
+        }
+
+
+
+		
 	}
 }
