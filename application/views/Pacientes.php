@@ -43,9 +43,8 @@
 				</tbody>
 			</table>
 		</div>
-		<div id="pacienteSeleccionado">
 			<form>
-			<div class="row">
+			<div class="row padding" id="seccionAPersonales">
 			<!--Antecedentes Personales-->	
 				<div class="col-md-12">
 					<h2>Antecedentes Personales:</h2>
@@ -86,20 +85,57 @@
     					<input type="text" id="sexo" class="form-control" value="Masculino">
     				</div>	
 				</div>
+			</div>
+			<div class="row" id="seccionAMedicos">	
 				<!--antecedentes Medicos-->	
 				<div class="col-md-12">
 					<h2>Antecedentes Medicos</h2>
 				</div>
-			    <div class="col-md-12">
+			    <div class="col-md-6">
 					<div class="form-group">
 						<label for="sel2">Alergias</label>
 						<select multiple class="form-control">
 							<option>Ibuprofeno</option>
 							<option>Pelo de Gato</option>
 						</select>
-			    	</div>	 			
-			    </div>
-			</div>
+			    	</div>
+			    </div>	
+			        <div class="col-md-6">
+						<div class="form-group">
+						   	<label for="sel2">Antecedentes Heredofamiliares</label>
+							<select multiple class="form-control">
+								<option>Sida</option>
+								<option>Anemia</option>
+							</select>
+			    		</div>	 			
+			        </div>
+			         <div class="col-md-12">
+						<div class="form-group">
+						    <label for="sel2">Vacunas</label>
+							<select multiple class="form-control">
+								<option>Tetano</option>
+								<option>Hipotermia</option>
+							</select>
+			    		</div>	 			
+			        </div>
+			    </div> 
+			    <div class="row" id="seccionEnfermedad">   
+			        <div class="col-md-12">
+						<h2>Ultima Enfermedad</h2> 	
+			        </div>
+			        <div class="col-md-12">
+			         	<div class="form-group">
+			    			<label for="nombreEnfermedad">Nombre de la Enfermedad:</label>
+			    			<input type="text" id="nombreEnfermedad" class="form-control">
+			    		</div>	 	
+			        </div>
+			        <div class="col-md-12">
+			         	<div class="form-group">
+			    			<label for="inicioEnfermedad">Inicio de la enfermedad:</label>
+			    			<input type="text" id="inicioEnfermedad" class="form-control">
+			    		</div>				         			
+			        </div> 				        			        			    		 		
+			   	</div>
 			</form>
 		</div>	
     </section>

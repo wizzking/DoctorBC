@@ -113,43 +113,31 @@
 
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">Barra de Navegacion</li>
+        <li class="header">Menu</li>
 
-        <li class="treeview ">
-          <a href="#">
-            <i class=""></i> <span>Lista de Pacientes</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
+        <li class="">
+          <a href="<?php echo site_url('Inicio/pacientes') ?>">
+            <i class="glyphicon glyphicon-user"></i> <span>Lista de Pacientes</span>
           </a>
         </li>
 
-          <li class="treeview ">
-          <a href="index.php/consulta">
-            <i class=""></i> <span>Nueva Consulta</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
+          <li class="">
+          <a href="<?php echo site_url('Inicio/consulta') ?>">
+            <i class="  glyphicon glyphicon-copy"></i> <span>Nueva Consulta</span>
           </a>
         </li>
 
 
           <li class="treeview ">
           <a href="#">
-            <i class=""></i> <span>Nuevo Paciente</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
+            <i class="glyphicon glyphicon-plus"></i> <span>Nuevo Paciente</span>
           </a>
         </li>
 
 
           <li class="treeview ">
           <a href="#">
-            <i class=""></i> <span>Configuraciones de la cuenta</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
+            <i class="glyphicon glyphicon-wrench"></i> <span>Configuraciones de la cuenta</span>
           </a>
         </li>
 
