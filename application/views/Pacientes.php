@@ -134,6 +134,9 @@
 			    			<label for="inicioEnfermedad">Inicio de la enfermedad:</label>
 			    			<input type="text" id="inicioEnfermedad" class="form-control">
 			    		</div>				         			
+			        </div>
+			        <div class="col-md-12">
+			        	<div class="btn btn-primary" id="atras">Atras</div>
 			        </div> 				        			        			    		 		
 			   	</div>
 			</form>

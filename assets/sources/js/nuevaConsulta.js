@@ -36,4 +36,11 @@ $(document).ready(function(){
 		$(".searchPaciente").hide(300);
 	});
 
+	$("#atras").click(function(){
+		$(".container-pacientes").show(400);
+		$(".searchPaciente").show(400);
+		$("#seccionAPersonales").hide(0);
+		$("#seccionAMedicos").hide(0);
+		$("#seccionEnfermedad").hide(0);
+	})
 });

@@ -199,7 +199,16 @@
 			    					<label for="inicioEnfermedad">Inicio de la enfermedad:</label>
 			    					<input type="text" id="inicioEnfermedad" class="form-control">
 			    				</div>				         			
-			         		</div> 			         						         		
+			         		</div>
+			         		<div class="col-md-12">
+						        <div class="form-group">
+						        	<label for="sel2">Medicamentos</label>
+								    <select multiple class="form-control">
+								        <option>Ibuprofeno</option>
+								        <option>Paracetamol</option>
+								   	</select>
+			    				</div>	 			
+			         		</div>			         		 			      		
 			         	</div>
 			        </div>
 			        <div class="modal-footer">
