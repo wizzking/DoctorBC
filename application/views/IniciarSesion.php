@@ -17,7 +17,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="../../index2.html"><b>Iniciar Sesion</b></a>
+   <p><b>Doctor Control</b><P>
   </div>
   <div class="login-box-body">
     <p class="login-box-msg">Iniciar Sesion</p>

@@ -19,6 +19,7 @@
 --Antecedentes
 *Alergias
 *Antecedentes heredofamiliares
+
 --Ultima enfermedad
 *Nombre de la enfermedad
 *Motivos de la consulta
@@ -27,6 +28,7 @@
 *Fecha fin
 *Nombre del medico *se ingresa solo pero estara el input
 *Fecha dela consulta
+
 --Historial de vacunas
 *Nombre de vacuna
 *Fecha de la vacuna
