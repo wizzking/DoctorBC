@@ -121,9 +121,14 @@
           </a>
         </li>
 
-          <li class="">
+        <li class="">
           <a href="<?php echo site_url('Inicio/consulta') ?>">
             <i class="  glyphicon glyphicon-copy"></i> <span>Nueva Consulta</span>
+          </a>
+        </li>
+        <li class="">
+          <a href="<?php echo site_url('Inicio/BuscarConsulta') ?>">
+            <i class="  glyphicon glyphicon-search"></i> <span>Buscar Consulta</span>
           </a>
         </li>
 

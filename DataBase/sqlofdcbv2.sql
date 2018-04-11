@@ -18,7 +18,6 @@
 --
 -- Table structure for table `dcb_medicos`
 --
-CREATE Database dbc;
 USE dbc; 
 
 DROP TABLE IF EXISTS `dcb_medicos`;

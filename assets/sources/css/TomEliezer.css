@@ -24,7 +24,9 @@ p,h1,h2,h3,h4,label{
 .table-hover:hover{
 	background-color:#757575;
 }
-.table tr{
+.table-container{
+	padding-top: 3%;
+	padding-bottom: 3%;
 }
 .datosPaciente{
 	background-color: #448AFF;
@@ -37,6 +39,9 @@ p,h1,h2,h3,h4,label{
 }
 .modal-title{
 	color: #000000;
+}
+.left{
+	float: right;
 }
 /*Colores de los botones*/
 .Personales{
