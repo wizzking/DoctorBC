@@ -4,6 +4,7 @@
   
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
+  <!--
     <section class="content-header">
     	<div class="container">
     		<div class="container-img">
@@ -12,9 +13,11 @@
     		
     	</div>
    	</section>
+  --> 	
    	<section>
     	<form>
-    		<div class="row padding ">
+    <!--
+    		<div class="row padding " id="datosDoctor">
     			<div class="col-md-12">
     				<div class="form-group">
     					<label for="nombreDoctor">Nombre del Doctor:</label>
@@ -34,8 +37,10 @@
     				</div>	
     			</div>
     		</div>
+    	-->
     		<div class="container-table padding ">
-				<h2>Pacientes</h2>          
+    			<h1>Primer paso:</h1>
+				<h2>Selecciona al paciente</h2>          
 				<table class="table">
 				    <thead>
 				    	<tr >
@@ -58,6 +63,7 @@
 				    </tbody>
 				  </table>
 			</div>
+    		
     		<div id="datosPaciente" class="padding" >
     			<div class="row">
     				<div class="col-md-12">
@@ -73,7 +79,68 @@
     				</div>
     			</div>
     		</div>
-    		<div >
+    		<div id="recetaMedica" class="table-container padding">
+    			<table class="table">
+				    <thead>
+				    	<tr >
+				        	<th>Medicamento</th>
+				        	<th>Cantidad</th>
+				        	<th>Dosis</th>
+				        	<th>Horas x dosis</th>
+				        	<th>Fecha Limite</th>
+				      	</tr>
+				    </thead>
+				    <tbody id="ColumnasTablaPacientes">
+				      	<tr>
+				        	<td>
+				        		<input type="text" name="medicamento" class="form-control">
+				        	</td>
+				        	<td>
+				        		<input type="text" name="cantidad" class="form-control">
+				        	</td>
+				        	<td>
+				    			<input type="text" name="dosis" class="form-control">
+							</td>
+				        	<td>
+				        		<select class="form-control">
+									<option>1</option>
+								    <option>2</option>
+									<option>3</option>
+								    <option>4</option>
+									<option>5</option>
+								    <option>6</option>
+									<option>7</option>
+								    <option>8</option>
+									<option>9</option>
+								    <option>10</option>
+									<option>11</option>
+								    <option>12</option>
+									<option>13</option>
+								    <option>14</option>
+									<option>15</option>
+								    <option>16</option>
+									<option>17</option>
+								    <option>18</option>
+									<option>19</option>
+								    <option>20</option>	
+								    <!--obciones que iran del 1 al 24-->
+								</select>				        		
+				        	</td>
+				        	<td>
+				        		<input type="date" name="fecha" class="form-control">	
+				        	</td>
+				      	</tr>
+				    </tbody>
+				</table>
+				    <div class="row">
+				    	<div class="col-md-12 col-md-offset-4">
+					    	<div class="btn btn-primary" id="agregarColumna"><i class="glyphicon glyphicon-plus"></i>Agregar campo</div>
+					    	<div class="btn btn-primary" id="eliminarColumna"><i class="glyphicon glyphicon-minus"></i>Eliminar campo</div>				    		
+				    	</div>
+				    </div>
+			</div>
+    	
+    		<div id="motivosConsulta">
     			<div class="row padding">
     				<div class="col-md-12">
     					<div class="form-group">
@@ -83,16 +150,20 @@
     				</div>
     			</div>
     			<div class=" row padding">
-    				<div class="col-md-12">
-    					<div class="btn btn-primary">Guardar Consulta</div>
+    				<div class="col-md-6 ">
+    					<div class="btn btn-primary" id="atrasNuConsulta">Atras</div>
+    				</div>
+    				<div class="col-md-6 ">
+    					<div class="btn btn-primary left">Guardar Consulta</div>
     				</div>
     			</div>
     		</div>
+
 			<!-- Modal ANTECEDENTES PERSONALES -->
+			
 			  <div class="modal fade" id="ModalAntecedentesPersonales" role="dialog">
 			    <div class="modal-dialog">
 			    
-			      <!-- Modal content-->
 			      <div class="modal-content">
 			        <div class="modal-header">
 			          <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -118,39 +189,28 @@
 			    					<input type="text" id="edadPaciente" class="form-control">
 			    				</div>	 	
 			         		</div>
-			         		<div class="col-md-12">
-			         			<div class="form-group">
-			    					<label for="domicilioPaciente">Domicilio:</label>
-			    					<input type="text" id="domicilioPaciente" class="form-control">
-			    				</div>	 	
-			         		</div>
 			         		<div class="col-md-6">
 			         			<div class="form-group">
 			    					<label for="sexoPaciente">Sexo:</label>
 			    					<input type="text" id="sexoPaciente" class="form-control">
 			    				</div>				         			
-			         		</div> 			         		
-			         		<div class="col-md-6">
-			         			<div class="form-group">
-			    					<label for="edadPaciente">Edad:</label>
-			    					<input type="text" id="edadPaciente" class="form-control">
-			    				</div>	 	
-			         		</div>					         		
+			         		</div> 			         						         		
 			         	</div>
 			        </div>
 			        <div class="modal-footer">
-			          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
 			        </div>
 			      </div>
 			      
 			    </div>
 			  </div>
+			
 			<!--fin Modal-->
 			<!--Modal ANTECEDENTES MEDICOS-->
+			
 						  <div class="modal fade" id="ModalAntecedentesMedicos" role="dialog">
 			    <div class="modal-dialog">
-			    
-			      <!-- Modal content-->
+			   
 			      <div class="modal-content">
 			        <div class="modal-header">
 			          <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -186,20 +246,14 @@
 			    				</div>	 			
 			         		</div>			         					         		
 			         		<div class="modal-header">
-								<h3 class="modal-title">Ultima Enfermedad</h3> 	
+								<h3 class="modal-title">Ultima Consulta</h3> 	
 			         		</div>
-			         		<div class="col-md-12">
-			         			<div class="form-group">
-			    					<label for="nombreEnfermedad">Nombre de la Enfermedad:</label>
-			    					<input type="text" id="nombreEnfermedad" class="form-control">
-			    				</div>	 	
-			         		</div>
-			         		<div class="col-md-6">
-			         			<div class="form-group">
-			    					<label for="inicioEnfermedad">Inicio de la enfermedad:</label>
-			    					<input type="text" id="inicioEnfermedad" class="form-control">
+			    				<div class="col-md-12">
+			    					<div class="form-group">
+							  			<label for="ultimaConsulta">Consulta pasada:</label>
+							  			<textarea class="form-control" rows="3" id="ultimaConsulta"></textarea>
+									</div>	
 			    				</div>				         			
-			         		</div>
 			         		<div class="col-md-12">
 						        <div class="form-group">
 						        	<label for="sel2">Medicamentos</label>
@@ -212,7 +266,7 @@
 			         	</div>
 			        </div>
 			        <div class="modal-footer">
-			          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
 			        </div>
 			      </div>
 			      

@@ -57,32 +57,20 @@
 				</div>
 				<div class="col-md-2">
 					<div class="form-group">
-    					<label for="edad">Edad:</label>
-    					<input type="text" id="edad" class="form-control" value="3 años">
+    					<label for="sexo">Sexo:</label>
+    					<input type="text" id="sexo" class="form-control" value="Masculino">
     				</div>	
-				</div>
-				<div class="col-md-10">
-					<div class="form-group">
-    					<label for="direccion">direccion:</label>
-    					<input type="text" id="direccion" class="form-control" value="Olga Acosta #11 Fracc. Villa Verde">
-    				</div>						
-				</div>
-				<div class="col-md-2">
-					<div class="form-group">
-    					<label for="peso">Peso:</label>
-    					<input type="text" id="peso" class="form-control" value="30kg">
-    				</div>	
-				</div>
+				</div>				
 				<div class="col-md-10">
 					<div class="form-group">
     					<label for="fecha">Fecha de nacimiento:</label>
     					<input type="text" id="fecha" class="form-control" value="12/04/1997">
     				</div>						
-				</div>
+				</div>				
 				<div class="col-md-2">
 					<div class="form-group">
-    					<label for="sexo">Sexo:</label>
-    					<input type="text" id="sexo" class="form-control" value="Masculino">
+    					<label for="peso">Peso:</label>
+    					<input type="text" id="peso" class="form-control" value="30kg">
     				</div>	
 				</div>
 			</div>
@@ -118,27 +106,8 @@
 							</select>
 			    		</div>	 			
 			        </div>
+			        <div class="btn btn-primary padding" id="atrasPacientes">Atras</div>
 			    </div> 
-			    <div class="row" id="seccionEnfermedad">   
-			        <div class="col-md-12">
-						<h2>Ultima Enfermedad</h2> 	
-			        </div>
-			        <div class="col-md-12">
-			         	<div class="form-group">
-			    			<label for="nombreEnfermedad">Nombre de la Enfermedad:</label>
-			    			<input type="text" id="nombreEnfermedad" class="form-control">
-			    		</div>	 	
-			        </div>
-			        <div class="col-md-12">
-			         	<div class="form-group">
-			    			<label for="inicioEnfermedad">Inicio de la enfermedad:</label>
-			    			<input type="text" id="inicioEnfermedad" class="form-control">
-			    		</div>				         			
-			        </div>
-			        <div class="col-md-12">
-			        	<div class="btn btn-primary" id="atras">Atras</div>
-			        </div> 				        			        			    		 		
-			   	</div>
 			</form>
 		</div>	
     </section>
@@ -146,4 +115,3 @@
 
 <?php $this->load->view('Global/AsideRight');?>
 <?php $this->load->view('Global/Footer');?>
-  	<div class="container-table">

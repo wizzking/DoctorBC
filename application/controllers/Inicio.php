@@ -59,5 +59,13 @@ class Inicio extends CI_Controller
         }
 		$this->load->view('Pacientes');
 	}
+	public function buscarConsulta()
+	{
+		if($this->session->userdata('Perfil') == FALSE || $this->session->userdata('Perfil') != '1')
+        {
+            redirect(base_url());
+        }
+        $this->load->view('buscarConsulta');
+	}
 
 }
