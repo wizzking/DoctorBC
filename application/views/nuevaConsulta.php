@@ -3,63 +3,21 @@
 <link rel="stylesheet" href="<?php echo base_url('assets/sources/css/TomEliezer.css');?>">
   
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-  <!--
-    <section class="content-header">
-    	<div class="container">
-    		<div class="container-img">
-    			<img  width="100" height="100" align=center src="<?php echo base_url('assets/sources/img/doctorSimbolo.png')?>">
-    		</div>
-    		
-    	</div>
-   	</section>
-  --> 	
+
    	<section>
     	<form>
-    <!--
-    		<div class="row padding " id="datosDoctor">
-    			<div class="col-md-12">
-    				<div class="form-group">
-    					<label for="nombreDoctor">Nombre del Doctor:</label>
-    					<input type="text" id="nombreDoctor" class="form-control">
-    				</div>	
-    			</div>
-    			<div class="col-md-6">
-    				<div class="form-group">
-    					<label for="fecha">Fecha:</label>
-    					<input type="text" id="fecha" class="form-control">
-    				</div>	
-    			</div>
-    			<div class="col-md-6">
-    				<div class="form-group">
-    					<label for="domicilio">Domicilio:</label>
-    					<input type="text" id="domicilio" class="form-control">
-    				</div>	
-    			</div>
-    		</div>
-    	-->
+
     		<div class="container-table padding ">
     			<h1>Primer paso:</h1>
 				<h2>Selecciona al paciente</h2>          
 				<table class="table">
 				    <thead>
 				    	<tr >
-				        	<th>Firstname</th>
-				        	<th>Lastname</th>
-				        	<th>Email</th>
+				        	<th>Nombre</th>
+				        	<th>Sexo</th>
 				      	</tr>
 				    </thead>
-				    <tbody >
-				      	<tr class="table-hover">
-				        	<td>John</td>
-				        	<td>Doe</td>
-				        	<td>john@example.com</td>
-				      	</tr>
-				      	<tr class="table-hover">
-				        	<td>Mary</td>
-				        	<td>Moe</td>
-				        	<td>mary@example.com</td>
-				      	</tr>
+				    <tbody id="tablaPaciente">
 				    </tbody>
 				  </table>
 			</div>
@@ -93,16 +51,16 @@
 				    <tbody id="ColumnasTablaPacientes">
 				      	<tr>
 				        	<td>
-				        		<input type="text" name="medicamento" class="form-control">
+				        		<input type="text" name="Table_medicamento" class="form-control" id="Table_medicamento">
 				        	</td>
 				        	<td>
-				        		<input type="text" name="cantidad" class="form-control">
+				        		<input type="text" name="Table_cantidad" class="form-control" id="Table_cantidad">
 				        	</td>
 				        	<td>
-				    			<input type="text" name="dosis" class="form-control">
+				    			<input type="text" name="Table_dosis" class="form-control" id="Table_dosis">
 							</td>
 				        	<td>
-				        		<select class="form-control">
+				        		<select class="form-control" id="Table_horaxdosis">
 									<option>1</option>
 								    <option>2</option>
 									<option>3</option>
@@ -115,19 +73,10 @@
 								    <option>10</option>
 									<option>11</option>
 								    <option>12</option>
-									<option>13</option>
-								    <option>14</option>
-									<option>15</option>
-								    <option>16</option>
-									<option>17</option>
-								    <option>18</option>
-									<option>19</option>
-								    <option>20</option>	
-								    <!--obciones que iran del 1 al 24-->
 								</select>				        		
 				        	</td>
 				        	<td>
-				        		<input type="date" name="fecha" class="form-control">	
+				        		<input type="date" name="fecha" class="form-control" id="Table_date">	
 				        	</td>
 				      	</tr>
 				    </tbody>
@@ -154,7 +103,7 @@
     					<div class="btn btn-primary" id="atrasNuConsulta">Atras</div>
     				</div>
     				<div class="col-md-6 ">
-    					<div class="btn btn-primary left">Guardar Consulta</div>
+    					<div class="btn btn-primary left" id="saveData">Guardar Consulta</div>
     				</div>
     			</div>
     		</div>
@@ -174,27 +123,21 @@
 			         		<div class="col-md-12">
 						        <div class="form-group">
 			    					<label for="nombrePaciente">Nombre:</label>
-			    					<input type="text" id="nombrePaciente" class="form-control">
+			    					<input type="text" id="ModalnombrePaciente" class="form-control">
 			    				</div>	 			
 			         		</div>
 			         		<div class="col-md-8">
 						       	<div class="form-group">
 			    					<label for="fechaPaciente">fecha:</label>
-			    					<input type="text" id="fechaPaciente" class="form-control">
+			    					<input type="text" id="ModalfechaPaciente" class="form-control">
 			    				</div>	 
 			         		</div>
 			         		<div class="col-md-4">
 			         			<div class="form-group">
-			    					<label for="edadPaciente">Edad:</label>
-			    					<input type="text" id="edadPaciente" class="form-control">
+			    					<label for="edadPaciente">Sexo:</label>
+			    					<input type="text" id="ModalsexoPaciente" class="form-control">
 			    				</div>	 	
-			         		</div>
-			         		<div class="col-md-6">
-			         			<div class="form-group">
-			    					<label for="sexoPaciente">Sexo:</label>
-			    					<input type="text" id="sexoPaciente" class="form-control">
-			    				</div>				         			
-			         		</div> 			         						         		
+			         		</div>		         						         		
 			         	</div>
 			        </div>
 			        <div class="modal-footer">
@@ -221,27 +164,24 @@
 			         		<div class="col-md-12">
 						        <div class="form-group">
 						        	<label for="sel2">Alergias</label>
-								    <select multiple class="form-control">
-								        <option>Ibuprofeno</option>
-								        <option>Pelo de Gato</option>
+								    <select multiple class="form-control" id="InputAlergias">
+		
 								   	</select>
 			    				</div>	 			
 			         		</div>
 			         		<div class="col-md-12">
 						        <div class="form-group">
 						        	<label for="sel2">Antecedentes Heredofamiliares</label>
-								    <select multiple class="form-control">
-								        <option>Sida</option>
-								        <option>Anemia</option>
+								    <select multiple class="form-control" id="InputHere">
+		
 								   	</select>
 			    				</div>	 			
 			         		</div>
 			         		<div class="col-md-12">
 						        <div class="form-group">
 						        	<label for="sel2">Vacunas</label>
-								    <select multiple class="form-control">
-								        <option>Tetano</option>
-								        <option>Hipotermia</option>
+								    <select multiple class="form-control" id="InputVacunas">
+					
 								   	</select>
 			    				</div>	 			
 			         		</div>			         					         		
@@ -253,16 +193,7 @@
 							  			<label for="ultimaConsulta">Consulta pasada:</label>
 							  			<textarea class="form-control" rows="3" id="ultimaConsulta"></textarea>
 									</div>	
-			    				</div>				         			
-			         		<div class="col-md-12">
-						        <div class="form-group">
-						        	<label for="sel2">Medicamentos</label>
-								    <select multiple class="form-control">
-								        <option>Ibuprofeno</option>
-								        <option>Paracetamol</option>
-								   	</select>
-			    				</div>	 			
-			         		</div>			         		 			      		
+			    				</div>				         					         		 			      		
 			         	</div>
 			        </div>
 			        <div class="modal-footer">
@@ -280,3 +211,5 @@
 
 <?php $this->load->view('Global/AsideRight');?>
 <?php $this->load->view('Global/Footer');?>
+<script src="<?php echo base_url('assets/sources/js/socket.io.js');?>"></script>
+<script src="<?php echo base_url('assets/sources/js/conexion.js');?>"></script>
