@@ -69,6 +69,12 @@ class Save extends CI_Model
 			return false;
 		}
 	}
+	public function DataLoads()
+	{
+		$this->db->select('*');
+		$this->db->from('dbc_hijos');
+		return $this->db->get()->result();
+	}
 }
 
 

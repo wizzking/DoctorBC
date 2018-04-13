@@ -80,11 +80,11 @@ $(document).ready(function(){
 	/*Agregar una columna a la tabla al hacer click*/
 	$("#agregarColumna").click(function(){
 		$("#ColumnasTablaPacientes").append('<tr id='+x+'>'+
-			'<td><input type="text"  name="medicamento"class="form-control"></td>'+
-			'<td><input type="text" name="cantidad" class="form-control"></td>'+
-			'<td><input type="text" name="dosis" class="form-control"></td>'+
+			'<td><input type="text"  name="medicamento"class="form-control inpStyle"></td>'+
+			'<td><input type="text" name="cantidad" class="form-control inpStyle"></td>'+
+			'<td><input type="text" name="dosis" class="form-control inpStyle"></td>'+
 			'<td>'+
-				'<select class="form-control">'+
+				'<select class="form-control inpStyle">'+
 					'<option>1</option>'+
 					'<option>2</option>'+
 					'<option>3</option>'+
@@ -108,7 +108,7 @@ $(document).ready(function(){
 				'</select>'+				        		
 			'</td>'+
 			'<td>'+
-				'<input type="date" name="fecha" class="form-control">'+	
+				'<input type="date" name="fecha" class="form-control inpStyle">'+	
 				'</td>'+
 		'</tr>');
 		x=x+1;

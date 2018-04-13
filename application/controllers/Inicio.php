@@ -82,5 +82,10 @@ class Inicio extends CI_Controller
 	    else
 	      echo "Error segundo";
 	}
+	public function DataLoad()
+	{
+		$Resul = $this->Save->DataLoads();
+	    echo json_encode($Resul);
+	}
 
 }
