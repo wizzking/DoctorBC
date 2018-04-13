@@ -67,10 +67,11 @@ class Sesion extends CI_Controller
 				{
 					$data = array(
 	                'is_logued_in' 		=> 		TRUE,	
-	                'FullName' 				=> 		$check_user->dcb_nombre.' '.$check_user->dcb_apellidoP.'  '.$check_user->dcb_apellidoM,
-	                'Perfil'		=>		$check_user->dcb_perfil,
-	                'Usuario' 	=> 		$check_user->dcb_Usuario,
-	                'TipoUsuario' => 'Medico'
+	                'FullName' 			=> 		$check_user->dcb_nombre.' '.$check_user->dcb_apellidoP.'  '.$check_user->dcb_apellidoM,
+	                'Perfil'			=>		$check_user->dcb_perfil,
+	                'Usuario' 			=> 		$check_user->dcb_Usuario,
+	                'TipoUsuario' 		=> 		'Medico',
+	                'Id_Usuario'		=>		$check_user->dcb_IdMedico
             		);
 					$this->session->set_userdata($data);
 					$this->index();

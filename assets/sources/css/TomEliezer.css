@@ -21,8 +21,26 @@ p,h1,h2,h3,h4,label{
 }
 .content-wrapper{
 }
+.Botones3{
+	margin-right: 20px;
+	margin-top: 10px;
+}
+.divBoton{
+	border-radius: 6px !important;
+background-color: #106ec9;
+font-weight: bold;
+padding: 10px 20px;
+font-size: 1.5em;
+}
+.divBoton:hover{
+	background-color: lightblue;
+	color: #000;
+}
 .table-hover:hover{
 	background-color:#757575;
+	cursor: pointer;
+	color: #e3e3e3;
+	font-weight: bold;
 }
 .table-container{
 	padding-top: 3%;
@@ -44,30 +62,12 @@ p,h1,h2,h3,h4,label{
 	float: right;
 }
 /*Colores de los botones*/
-.Personales{
-	background-color:#2196F3;
-}
-.Personales:hover{
-	background-color:#2196F3;
-	opacity: 0.5;	
-}
-.Medicos{
-	background-color: #2196F3;
-}
-.Medicos:hover{
-	background-color: #2196F3;
-	opacity: 0.5;	
-}
-.cambiar{
-	background-color: #2196F3;
-}
-.cambiar:hover{
-	background-color: #2196F3;
-	opacity: 0.5;
-}
+
 /*fin de los colores de los botones*/
 
 /*********/
 .inicio{
 	height: 0px;
 }
+
+input{font-size: 20px;}

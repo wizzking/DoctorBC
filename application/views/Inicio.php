@@ -15,25 +15,6 @@
 
 
    <div class="content-wrapper">
-        
-  <br><br><br>
-  <div class="row">
-    <div class="col-xs-3">
-      <select class="form-control col-xs-3" name="" id="idHijo"></select>(te mando todos los datos de los hijos, se encuentran en la consola impresos)<br>
-      <button class="btn btn-default" id="btnSendIdH">INICIAR CONSULTA</button>
-    </div>
-    <br><br><br><br>
-
-  </div>
-  <div class="row">
-    <div class="col-xs-4">
-      <input type="text" id="nombreM" placeholder="Nombre medicamento"><br>
-    <textarea id="descripcion" cols="30" rows="10" placeholder="descripcion"></textarea><br>
-    <input type="number" placeholder="hora" id="hora"> <span>hora/s</span><br>
-    <input type="date" id="fecha" placeholder="fecha limite"><br>
-    <button id="guardarC">Guardar</button>
-    </div>
-  </div>
 
 
 

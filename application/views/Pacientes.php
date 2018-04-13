@@ -29,7 +29,7 @@
 					    <th>Email</th>
 					</tr>
 				</thead>
-				<tbody >
+				<tbody id="table_cont">
 					<tr class="table-hover1">
 					    <td>John</td>
 					    <td>Doe</td>
@@ -115,3 +115,5 @@
 
 <?php $this->load->view('Global/AsideRight');?>
 <?php $this->load->view('Global/Footer');?>
+<script src="<?php echo base_url('assets/sources/js/jquery-1.11.3.min.js');?>"></script>
+<script src="<?php echo base_url('assets/sources/js/LoadPacient.js');?>"></script>
