@@ -8,6 +8,7 @@
     	<form>
 
     		<div class="container-table padding ">
+    			<input id="id_Medico" type="hidden" value="<?php echo $this->session->userdata('Id_Usuario'); ?>">
     			<h1>Primer paso:</h1>
 				<h2>Selecciona al paciente</h2>          
 				<table class="table">
@@ -27,13 +28,13 @@
     				<div class="col-md-12">
     					<h2>Paciente:</h2>
     				</div>
-    				<div class="col-md-11 ">
+    				<div class="col-md-12 ">
     					<input type="text" class="form-control" name="nombrePaciente" id="nombrePaciente">
     				</div>
-    				<div class="col-md-12 col-md-offset-3">
-    					<div class="btn btn-primary Personales" data-toggle="modal" data-target="#ModalAntecedentesPersonales">Ver Antecedentes Personales</div>
-    					<div class="btn btn-primary Medicos" data-toggle="modal" data-target="#ModalAntecedentesMedicos">Ver Antecedentes Medicos</div>
-    					<div class="btn btn-primary cambiar" id="cambiar">Cambiar Paciente</div>				
+    				<div class="pull-right Botones3">
+    					<div class="btn btn-primary Personales divBoton" data-toggle="modal" data-target="#ModalAntecedentesPersonales">Ver Antecedentes Personales</div>
+    					<div class="btn btn-primary Medico divBoton" data-toggle="modal" data-target="#ModalAntecedentesMedicos">Ver Antecedentes Medicos</div>
+    					<div class="btn btn-primary cambiar divBoton" id="cambiar">Cambiar Paciente</div>				
     				</div>
     			</div>
     		</div>
@@ -211,5 +212,6 @@
 
 <?php $this->load->view('Global/AsideRight');?>
 <?php $this->load->view('Global/Footer');?>
+<script src="<?php echo base_url('assets/sources/js/jquery-1.11.3.min.js');?>"></script>
 <script src="<?php echo base_url('assets/sources/js/socket.io.js');?>"></script>
 <script src="<?php echo base_url('assets/sources/js/conexion.js');?>"></script>

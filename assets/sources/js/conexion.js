@@ -1,14 +1,19 @@
-var IP		=	'192.168.43.45';
+var IP		=	'192.168.43.219';
 var webData	=	[{id:"webId",name:"Web"}];
 var socket;
 var nip;
 
 var HijosArray = [];
-var VacunasArray = [];
-var EnfermedadesArray = [];
-var AlergiasArray = [];
 var FechaArray =[];
 var SexoArray = [];
+var PesoArray = [];
+var AlturaArray =[];
+var id_overPower = 0;
+
+var VacunasString = '';
+var VacunasFechaString = '';
+var EnfermedadesString = '';
+var AlergiasString = '';
 
 conectarme(); 
 var response = getResponse();
@@ -57,7 +62,9 @@ function conectarme(){
 				+'</tr>');
 			SexoArray[i+1] = data[i].sexo;
 			HijosArray[i+1] = data[i].nombreH;
-			FechaArray[i+1] = data[i].fecha_ha;
+			FechaArray[i+1] = data[i].fecha_na;
+			PesoArray[i+1] = data[i].peso;
+			AlturaArray[i+1] = data[i].altura;
 		};
 	});
 
@@ -68,21 +75,31 @@ function conectarme(){
 		for(i=0;i<a.length;i++)
 		{
 			if (a[i].nombreA != 'none')
+			{
 				$('#InputAlergias').append('<option>'+a[i].nombreA+'</option>');
+				AlergiasString += a[i].nombreA + ',';
+			}
 		};
 
 		e = JSON.parse(e);
 		for(i=0;i<e.length;i++)
 		{
 			if (e[i].nombreH != 'none')
+			{
 				$('#InputHere').append('<option>'+e[i].nombreH+'</option>');
+				EnfermedadesString += e[i].nombreH + ',';
+			}
 		};
 
 		v = JSON.parse(v);
 		for(i=0;i<v.length;i++)
 		{
 			if (v[i].nombreV != 'none')
+			{
 				$('#InputVacunas').append('<option>'+v[i].nombreV+' - '+v[i].fechaV+'</option>');
+				VacunasString += v[i].nombreV + ',';
+				VacunasFechaString += v[i].fechaV + ',';
+			}
 		};
 
 		//console.log('Datos hijos:\n');
@@ -101,6 +118,7 @@ $('#saveData').click(function(){
 		'tiempo':$('#Table_horaxdosis').val(),
 		'fechaLimite':$('#Table_date').val()//envien la fecha con formato: yyyy-MM-dd (automaticamente ya esta en ese formato si se usa jQuery y se escribe de esa forma)
 	});
+	SaveDataConsulta();
 	socket.emit('postRecordatorio',data,nip);
 });
 
@@ -124,6 +142,7 @@ function changeid(data)
 {
 	socket.emit('postIdHijo',data,nip);
 	//alert(data);
+	id_overPower = data;
 		$('#nombrePaciente').val(HijosArray[data]);
 		$('#ModalnombrePaciente').val(HijosArray[data]);
 		$('#ModalfechaPaciente').val(FechaArray[data]);
@@ -136,4 +155,34 @@ function changeid(data)
 				});
 
 			});	
+}
+
+
+function SaveDataConsulta() 
+{
+	var StringDes = $('#Table_medicamento').val()+' '+$('#Table_dosis').val()+', '+$('#Table_cantidad').val()+' cada '+$('#Table_horaxdosis').val()+' hora/s.';
+	//alert(FechaArray[id_overPower]);
+    $.post('http://localhost/DoctorBC/index.php/Inicio/SaveConsulta',
+      {
+       'dbc_nombre': HijosArray[id_overPower],
+       'dbc_peso': PesoArray[id_overPower],
+       'dbc_altura': AlturaArray[id_overPower],
+       'dbc_fechaNacimiento': FechaArray[id_overPower],
+       'dbc_sexo':   SexoArray[id_overPower],
+       'EnfermedadesString':   EnfermedadesString,
+       'VacunasString':   VacunasString,
+       'AlergiasString':   AlergiasString,
+       'VacunasFechaString': VacunasFechaString,
+       'dbc_descripcion': StringDes,
+       'dbc_idMedico' : $('#id_Medico').val(),
+       'dbc_timepo': $('#Table_horaxdosis').val(),
+       'dbc_fechaLim':$('#Table_date').val(),
+       'dbc_motivosConsulta' :$("#motivosConsulta").text(),
+       'dbc_nip' : nip
+      },
+      function (data)
+      {
+      	alert(data);
+     });
+   
 }

@@ -3,6 +3,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Inicio extends CI_Controller 
 {
+	public function __construct() 
+	{
+		parent::__construct();
+		$this->load->model('Save');
+	}
+
 	public function index()
 	{
 		if($this->session->userdata('Perfil') == FALSE || $this->session->userdata('Perfil') != '1')
@@ -66,6 +72,15 @@ class Inicio extends CI_Controller
             redirect(base_url());
         }
         $this->load->view('buscarConsulta');
+	}
+	public function SaveConsulta()
+	{
+		$data = $this->input->post();
+
+	    if ($this->Save->SaveConsultas($data) == true) 
+	      echo "Exito";
+	    else
+	      echo "Error segundo";
 	}
 
 }
