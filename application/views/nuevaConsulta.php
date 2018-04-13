@@ -11,7 +11,7 @@
     			<input id="id_Medico" type="hidden" value="<?php echo $this->session->userdata('Id_Usuario'); ?>">
     			<h1>Primer paso:</h1>
 				<h2>Selecciona al paciente</h2>          
-				<table class="table">
+				<table class="table table-striped table-hover">
 				    <thead>
 				    	<tr >
 				        	<th>Nombre</th>
@@ -19,17 +19,18 @@
 				      	</tr>
 				    </thead>
 				    <tbody id="tablaPaciente">
+				    	
 				    </tbody>
 				  </table>
 			</div>
     		
-    		<div id="datosPaciente" class="padding" >
+    		<div id="datosPaciente" class="padding" ><!-- -->
     			<div class="row">
     				<div class="col-md-12">
     					<h2>Paciente:</h2>
     				</div>
     				<div class="col-md-12 ">
-    					<input type="text" class="form-control" name="nombrePaciente" id="nombrePaciente">
+    					<input type="text" class="form-control inpStyle" name="nombrePaciente" id="nombrePaciente">
     				</div>
     				<div class="pull-right Botones3">
     					<div class="btn btn-primary Personales divBoton" data-toggle="modal" data-target="#ModalAntecedentesPersonales">Ver Antecedentes Personales</div>
@@ -38,10 +39,12 @@
     				</div>
     			</div>
     		</div>
-    		<div id="recetaMedica" class="table-container padding">
-    			<table class="table">
+    		
+    		<div id="recetaMedica" class="table-container padding"> <!--  -->
+    			<hr>
+    			<table class="table ">
 				    <thead>
-				    	<tr >
+				    	<tr style="font-weight: bold;font-size: 20px;" >
 				        	<th>Medicamento</th>
 				        	<th>Cantidad</th>
 				        	<th>Dosis</th>
@@ -52,16 +55,16 @@
 				    <tbody id="ColumnasTablaPacientes">
 				      	<tr>
 				        	<td>
-				        		<input type="text" name="Table_medicamento" class="form-control" id="Table_medicamento">
+				        		<input type="text" name="Table_medicamento" class="form-control inpStyle" id="Table_medicamento">
 				        	</td>
 				        	<td>
-				        		<input type="text" name="Table_cantidad" class="form-control" id="Table_cantidad">
+				        		<input type="text" name="Table_cantidad" class="form-control inpStyle" id="Table_cantidad">
 				        	</td>
 				        	<td>
-				    			<input type="text" name="Table_dosis" class="form-control" id="Table_dosis">
+				    			<input type="text" name="Table_dosis" class="form-control inpStyle" id="Table_dosis">
 							</td>
 				        	<td>
-				        		<select class="form-control" id="Table_horaxdosis">
+				        		<select class="form-control inpStyle" id="Table_horaxdosis">
 									<option>1</option>
 								    <option>2</option>
 									<option>3</option>
@@ -77,34 +80,35 @@
 								</select>				        		
 				        	</td>
 				        	<td>
-				        		<input type="date" name="fecha" class="form-control" id="Table_date">	
+				        		<input type="date" name="fecha" class="form-control inpStyle" id="Table_date">	
 				        	</td>
 				      	</tr>
 				    </tbody>
 				</table>
 				    <div class="row">
-				    	<div class="col-md-12 col-md-offset-4">
-					    	<div class="btn btn-primary" id="agregarColumna"><i class="glyphicon glyphicon-plus"></i>Agregar campo</div>
-					    	<div class="btn btn-primary" id="eliminarColumna"><i class="glyphicon glyphicon-minus"></i>Eliminar campo</div>				    		
+				    	<div class=" pull-right Botones3">
+					    	<div class="btn btn-primary divBoton" id="agregarColumna"><i class="glyphicon glyphicon-plus"></i>Agregar campo</div>
+					    	<div class="btn btn-primary divBoton" id="eliminarColumna"><i class="glyphicon glyphicon-minus"></i>Eliminar campo</div>				    		
 				    	</div>
 				    </div>
 			</div>
     	
-    		<div id="motivosConsulta">
+    		<div id="motivosConsulta"><!--  -->
+    			<hr>
     			<div class="row padding">
     				<div class="col-md-12">
     					<div class="form-group">
-				  			<label for="motivos">Motivos de la consulta:</label>
-				  			<textarea class="form-control" rows="3" id="motivos"></textarea>
+				  			<label for="motivos" style="font-weight: bold;font-size: 20px;">Motivos de la consulta:</label>
+				  			<textarea class="form-control inpStyle" style="padding: 20px;" rows="3" id="motivos"></textarea>
 						</div>	
     				</div>
     			</div>
     			<div class=" row padding">
     				<div class="col-md-6 ">
-    					<div class="btn btn-primary" id="atrasNuConsulta">Atras</div>
+    					<div class="btn btn-primary divBoton" id="atrasNuConsulta">Atras</div>
     				</div>
     				<div class="col-md-6 ">
-    					<div class="btn btn-primary left" id="saveData">Guardar Consulta</div>
+    					<div class="btn btn-primary divBoton left" id="saveData">Guardar Consulta</div>
     				</div>
     			</div>
     		</div>
@@ -124,19 +128,19 @@
 			         		<div class="col-md-12">
 						        <div class="form-group">
 			    					<label for="nombrePaciente">Nombre:</label>
-			    					<input type="text" id="ModalnombrePaciente" class="form-control">
+			    					<input type="text" id="ModalnombrePaciente" class="form-control inpLocked">
 			    				</div>	 			
 			         		</div>
 			         		<div class="col-md-8">
 						       	<div class="form-group">
 			    					<label for="fechaPaciente">fecha:</label>
-			    					<input type="text" id="ModalfechaPaciente" class="form-control">
+			    					<input type="text" id="ModalfechaPaciente" class="form-control inpLocked">
 			    				</div>	 
 			         		</div>
 			         		<div class="col-md-4">
 			         			<div class="form-group">
 			    					<label for="edadPaciente">Sexo:</label>
-			    					<input type="text" id="ModalsexoPaciente" class="form-control">
+			    					<input type="text" id="ModalsexoPaciente" class="form-control inpLocked">
 			    				</div>	 	
 			         		</div>		         						         		
 			         	</div>

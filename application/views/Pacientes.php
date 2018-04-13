@@ -30,19 +30,17 @@
 					</tr>
 				</thead>
 				<tbody id="table_cont">
-					<tr class="table-hover1">
-					    <td>John</td>
-					    <td>Doe</td>
-					    <td>john@example.com</td>
-					</tr>
-					<tr class="table-hover1">
-					    <td>Mary</td>
-					    <td>Moe</td>
-					    <td>mary@example.com</td>
-					</tr>
+					
 				</tbody>
 			</table>
 		</div>
+
+
+
+
+
+
+		
 			<form>
 			<div class="row padding" id="seccionAPersonales">
 			<!--Antecedentes Personales-->	
